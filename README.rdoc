@@ -14,7 +14,7 @@ git による簡単なバックアップ環境を提供する
  git clone git://github.com/answer/backupper.git .
  git remote set-url origin <バックアップする url>
  crontab -e
- 0 5 * * * /var/etc-backup/.backup/run.sh >> /var/etc-backup/.backup/log/backup.log
+ 0 5 * * * /var/etc-backup/.backup/run.sh >> /var/etc-backup/.backup/log/backup.log 2>&1
 
 
 == 設定
