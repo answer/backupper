@@ -1,0 +1,31 @@
+= backupper
+
+簡単バックアップ環境
+
+git による簡単なバックアップ環境を提供する
+
+特に、 /etc 以下の設定ファイルをバックアップする目的で作成した
+
+
+== 設置
+
+ mkdir /var/etc-backup
+ cd /var/etc-backup
+ git clone ... .
+ git remote set-url origin <バックアップする url>
+ crontab -e
+ /var/etc-backup/backup_run.sh
+
+
+== backup.sh
+
+ (略)
+ cd /var/etc-backup
+
+ cp -f /etc/apache2/sites-availables/* apache2/sites-availables
+ ...
+
+ git add .
+ (略)
+
+cp を列挙する感じ
